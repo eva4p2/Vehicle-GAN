@@ -19,7 +19,7 @@ def gans(event, context):
     try:
         gindex = random.randint(20,68)
         #gindex = gindex % 68
-        filename = "images/" + gindex + ".png"
+        filename = "images/" + str(gindex) + ".png"
         print(filename)
         img = cv2.imread(filename,-1)
         dim = (350, 350)
