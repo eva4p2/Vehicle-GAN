@@ -26,7 +26,7 @@ def gans(event, context):
         resized = cv2.resize(img, dim, interpolation = cv2.INTER_AREA)
         _, im_arr = cv2.imencode('.png', resized)  # im_arr: image in Numpy one-dim array format.
         #im_bytes = im_arr.tobytes()
-        fields = {"gans": base64.b64encode(img_arr).decode("utf-8")} #back to binary
+        fields = {"gans": base64.b64encode(im_arr).decode("utf-8")} #back to binary
         return {
             "statusCode": 200,
             "headers": {
